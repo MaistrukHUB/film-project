@@ -1,0 +1,371 @@
+.header {z-index: 100000;
+	position: fixed;
+	height: 141px;
+	width: 1922px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #212323;
+	&__logo {
+		img{
+			width: 157px;
+			height: 94px;
+		}
+	}
+	&__naw {
+		margin: 0 20px;
+		display: flex;
+		li{
+			margin-right: 30px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			a{
+				display: flex;
+				align-items: center;
+				transition:  0.2s ;
+				&:hover{
+					color: #81BECB;
+				}
+			}
+			svg{
+				&.rotated{
+					transform: rotate(180deg);
+				}
+			}
+			ul{
+				z-index: 20;
+				top: 31px;
+				left: -50%;
+				position: absolute;
+				width: 213px;
+				height: 404px;
+				background: rgba(28, 29, 31, 0.5);
+				border: 1px solid #2B2B2B;
+				border-radius: 0px 5px 5px 5px;
+				display: flex;
+				padding: 20px;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: space-between;
+				display: none;
+					&.visible{
+						display: flex;
+					}
+				}
+			}
+		:last-child{
+			margin-right: 0;
+		}
+	}
+	&__search {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 30px;
+		background: #1B1E1E;
+		border: 2px solid #252A2C;
+		height: 64px;
+		width: 716px;
+		border-radius: 93px;
+		input{
+			background: #1B1E1E;
+			border: none;
+			color: #fff;
+			width: 100%;
+			::placeholder{
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21px;
+				color: #6D7A7C;
+			}                 
+		}
+		a{
+			svg{
+				display: inline-block;
+				width: 29px;
+				height: 29px;
+				color: #fff;
+				&:focus,
+				&:hover {
+					g{
+							stroke: #fff;
+					}
+				}
+				/* On click: thicker black strokes  */
+				&:active {
+					g {
+					stroke: #6D7A7C;
+					stroke-width: 2px;
+					}
+				}
+			}
+		}
+	}
+	.user{
+	
+	} 
+	.user__buttons._active{
+		width: 230px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.user__buttons._disable{
+		display: none;
+	}
+	.button_login{
+		margin-right:15px;
+	}
+	.user__show {
+		display: none;
+	}
+	.user__show._active{
+		display: flex;
+		align-items: center;
+		p{
+			margin-right: 20px;
+			span{
+				margin-left: 5px;
+				text-decoration: underline;
+				color: #81BECB;
+			}
+		}
+	}
+	.btn{
+		font-weight: 700;
+		padding: 10px 15px;
+		border-radius: 25px;
+	}
+	.btn-blue{
+		transition:  0.3s ;
+		color: #252A2C;
+		background: #81BECB;
+		&:hover{
+			border: solid 2px #81BECB;
+			color: #81BECB;
+			background: #252A2C;
+		}
+	}
+	.btn-border{
+		transition:  0.3s ;
+		color: #81BECB;
+		background:#252A2C ;
+		border: solid 2px #81BECB;
+		&:hover{
+			color: #252A2C;
+			background: #81BECB;
+		}
+	}
+	.user__window{
+		display: none;
+	}
+	.user__window._active{
+		border-radius: 20px;
+		left: calc(50% - 400px);
+		padding: 70px;
+		background: #252A2C;
+		width: 800px;
+		height: 500px;
+		position: fixed;
+		margin-top: 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.user__form{
+		display: flex;
+		flex-direction: column;
+	}
+	.form__inputs{
+		display: flex;
+		flex-direction: column;
+	}
+	.input_form{
+		border-radius:10px;
+		padding: 0 10px;
+		margin-bottom: 20px;
+		font-weight: 700;
+		width: 300px;
+		height: 50px;
+	}
+	.input-by-check-true-pass{
+		display: none;
+	}
+	.input-by-check-true-pass._active{
+		display: flex;
+	}
+	.form_buttons{
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.enter{
+		display: none;
+	}
+	.enter._active{
+		display: flex;
+	}
+	.registering{
+		display: none;
+	}
+	.registering._active{
+		display: flex;
+		justify-content: center;
+	}
+	.error{
+		color: #d60606;
+		margin-bottom: 15px ;
+		text-align: center;
+	}
+	.enter-error{
+		display: none;
+	}
+	.error_notSamePass{
+		display: none;
+	}
+	.error_sameUser{
+		display: none;
+	}
+	.enter-error._active{
+		display: inline;
+	}
+	.error_notSamePass._active{
+		display: inline;
+	}
+	.error_sameUser._active{
+		display: inline;
+	}
+	.icon_selectedMovies{
+		color: #2B2B2B;
+		background: #ffffff;
+		display: flex;
+		align-items: center;
+		margin: 0 10px;
+		svg{
+
+			position: relative;
+			top: -2px;
+			left: -2px;
+			height: 22px;
+			width: 20px;
+		}
+	}
+	// .headerLogin{
+		
+	// 	width:220px;
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	.login-window{
+	// 		display: none;
+	// 	}
+	// 	.login-window._active{
+	// 		display: block;
+	// 		padding: 0 100px;
+	// 		position: fixed;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		top: 250px;
+	// 		left: 30%;
+	// 		width: 30%;
+	// 		height: 500px;
+	// 		z-index: 1000;
+	// 		background-color: #3d3d3d;
+	// 		border-radius: 50px;
+	// 	}
+	// 	.registering-window {
+	// 		display: none;
+	// 	}
+	// 	.registering-window._active{
+	// 		display: block;
+	// 		padding: 0 100px;
+	// 		position: fixed;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		top: 250px;
+	// 		left: 30%;
+	// 		width: 30%;
+	// 		height: 500px;
+	// 		z-index: 1000;
+	// 		background-color: #3d3d3d;
+	// 		border-radius: 50px;
+	// 	}
+	// 	.button-login{
+	// 		display: flex;
+	// 		justify-content: center;
+	// 		align-items: center;
+	// 		padding: 5px 15px;
+	// 		background: #81BECB;
+	// 		border-radius: 57px;
+	// 	}
+	// 	.button-login._active{
+	// 		display:none;
+	// 	}
+	// 	.login-form-buttons{
+	// 		display: flex;
+	// 		justify-content: space-between;
+	// 	}
+	// 	.registering-form-buttons{
+	// 		display: flex;
+	// 		justify-content: space-between;
+	// 	}
+	// 	.button-registering{
+	// 		margin: 0 auto;
+	// 		margin-left: 20px;
+	// 		display: flex;
+	// 		justify-content: center;
+	// 		align-items: center;
+	// 		padding: 5px 15px;
+	// 		border: solid  3px #81BECB;
+	// 		border-radius: 57px;
+	// 	}
+	// 	.button-registering._active{
+	// 		display:none;
+	// 	}
+	// 	.button-exit{
+	// 		display: none;
+	// 	}
+	// 	.button-exit._active{
+	// 		visibility: visible;
+	// 		display: flex;
+	// 		justify-content: center;
+	// 		align-items: center;
+	// 		width: 60%;
+	// 		padding: 5px 7px;
+	// 		border: solid  3px #81BECB;
+	// 		border-radius: 57px;
+	// 	}
+	// 	.name-user {
+	// 		display: none;
+	// 		margin: auto 0;
+	// 	}
+	// 	.name-user._active{
+	// 		display: block;
+	// 	}
+
+	// 	.login-form{
+	// 		margin-left: 130px;
+	// 		display:flex;
+	// 		flex-direction: column;
+	// 		input{
+	// 			width: 250px;
+	// 			height: 30px;
+	// 			margin-bottom: 20px;
+	// 			padding: 5px;
+	// 		}
+	// 	}
+	// 	.registering-form{
+	// 		margin-left: 130px;
+	// 		display:flex;
+	// 		flex-direction: column;
+	// 		input{
+	// 			width: 250px;
+	// 			height: 30px;
+	// 			margin-bottom: 20px;
+	// 			padding: 5px;
+	// 		}
+	// 	}
+	// }
+}

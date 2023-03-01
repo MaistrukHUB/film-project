@@ -1,0 +1,46 @@
+.new-collection {
+	background: rgba(28, 29, 31, 0.5);
+	border-radius: 5px;
+	margin-bottom: 30px;
+	img{
+		width: 130px;
+		height: 160px;
+		background-size: 100% 100%;
+		margin-right: 15px;
+		border-radius: 5px;
+		transition:  0.5s ;
+	}
+	&__item {
+		padding: 15px;
+		border: 1px solid #2B2B2B;
+		display: flex;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+	}
+	&__time {
+		margin-bottom: 10px;
+		display: flex;
+		color: #A4A4A4;
+		.img{
+			margin-right: 10px;
+		}
+		p{
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+			color: #A4A4A4;
+		}
+		&__about{
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 23px;
+			color: #FFFFFF;
+		}
+	}
+}

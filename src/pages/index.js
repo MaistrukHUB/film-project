@@ -1,0 +1,11 @@
+export { default as Home } from './Home'
+export { default as ByGenre } from './ByGenre'
+export { default as Collections } from './CollectionsPages'
+export { default as Movies } from './Movies'
+export { default as MoviePages } from './MoviePages'
+export { default as CategoryMovies } from './CategoryMovies'
+export { default as SearchPages } from './SearchPages'
+export { default as SelectedCollection } from './SelectedCollection'
+export { default as CollectionsPages } from './CollectionsPages'
+export { default as SelectedMovies } from './SelectedMovies'
+
